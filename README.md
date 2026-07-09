@@ -2,11 +2,13 @@
 
 Professional portfolio for showcasing coursework, artifacts, reflections, skills, and career goals in AI, machine learning, and technology.
 
-## Pages
+## Sections
 
-- Home: introduction and career goals
-- About Me: biography, education, skills, and professional interests
-- Portfolio: Workshop 1 AI and Machine Learning Timeline, reflection, and space for future artifacts
+- Home: introduction and professional summary
+- About: biography, skills, and professional interests
+- Experience: software engineering and AI growth
+- Education: degrees and academic background
+- Artifacts page: Workshop 1 AI and Machine Learning Timeline, reflection, and space for future artifacts
 - Contact: email, LinkedIn, and GitHub links
 
 ## GitHub Pages
