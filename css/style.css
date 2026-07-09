@@ -176,6 +176,7 @@ a:hover {
 .reflection-block p,
 .contact-panel p,
 .contact-panel li,
+.education-list li,
 .resume-section li {
   color: var(--muted);
 }
@@ -277,6 +278,15 @@ a:hover {
   gap: 10px;
   padding: 0;
   list-style: none;
+}
+
+.education-list {
+  margin: 0 0 20px;
+  padding-left: 20px;
+}
+
+.education-list li {
+  margin-bottom: 8px;
 }
 
 .tag-list li {
