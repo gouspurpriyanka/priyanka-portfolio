@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Priyanka Gouspur photo placeholder</title>
+  <desc id="desc">A temporary professional portrait placeholder with the initials PG.</desc>
+  <rect width="800" height="1000" fill="#e7f4f8"/>
+  <circle cx="400" cy="330" r="150" fill="#176b87"/>
+  <path d="M170 835c38-170 148-260 230-260s192 90 230 260" fill="#176b87"/>
+  <text x="400" y="905" fill="#0f4f63" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" text-anchor="middle">PG</text>
+</svg>
