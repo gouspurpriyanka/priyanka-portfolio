@@ -335,71 +335,90 @@ a:hover {
   padding: 72px 0;
 }
 
-.page-intro {
-  margin-bottom: 44px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 16px;
+.artifacts-hero {
+  background: linear-gradient(180deg, rgba(23, 107, 135, 0.1), rgba(255,255,255,0.7));
+  border: 1px solid rgba(23, 107, 135, 0.12);
+  border-radius: 24px;
   box-shadow: var(--shadow);
-  padding: 34px;
+  padding: 44px 40px;
+  margin-bottom: 30px;
 }
 
-.page-intro h1 {
+.hero-copy {
+  max-width: 840px;
+}
+
+.hero-copy .eyebrow {
+  margin-bottom: 18px;
+  color: var(--primary);
+}
+
+.artifacts-hero h1 {
   margin: 0;
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  line-height: 1.05;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.02;
 }
 
-.page-intro-text {
-  max-width: 720px;
-  margin-top: 18px;
+.hero-copy-text {
+  margin-top: 20px;
   color: var(--muted);
-  font-size: 1.04rem;
+  font-size: 1.05rem;
+  max-width: 730px;
 }
 
-.artifact-card,
-.reflection-block {
+.artifact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 34px;
+}
+
+.artifact-card {
   background: var(--surface);
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 22px;
   box-shadow: var(--shadow);
   padding: 32px;
-  margin-bottom: 28px;
-}
-
-.featured-artifact {
   display: grid;
-  gap: 24px;
+  gap: 26px;
 }
 
-.artifact-header {
+.artifact-card-header {
   display: flex;
   justify-content: space-between;
-  gap: 24px;
+  gap: 22px;
   align-items: flex-start;
 }
 
-.artifact-header h2 {
+.artifact-card-header h2 {
   margin: 0;
-  font-size: clamp(1.85rem, 3vw, 2.4rem);
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
 }
 
-.artifact-tag {
-  padding: 12px 18px;
+.artifact-card p.project-type {
+  margin: 0 0 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.artifact-pill {
+  padding: 10px 16px;
   border-radius: 999px;
-  background: rgba(23, 107, 135, 0.12);
+  background: rgba(22, 110, 149, 0.12);
   color: var(--primary-dark);
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.78rem;
-  white-space: nowrap;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
 }
 
-.artifact-summary-text {
+.artifact-intro {
+  margin: 0;
   color: var(--muted);
-  margin-top: 10px;
-  max-width: 660px;
+  font-size: 1rem;
+  line-height: 1.7;
 }
 
 .artifact-detail-grid {
@@ -411,44 +430,57 @@ a:hover {
 .artifact-detail-grid p {
   margin: 0;
   padding: 22px;
-  background: #fbfcfe;
-  border: 1px solid var(--line);
-  border-radius: 12px;
+  background: rgba(235, 244, 250, 0.9);
+  border: 1px solid rgba(23, 107, 135, 0.12);
+  border-radius: 14px;
 }
 
 .artifact-detail-grid strong {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   color: var(--text);
 }
 
 .artifact-actions {
-  margin-top: 16px;
-  justify-content: flex-start;
+  margin-top: 14px;
+  display: flex;
+  gap: 14px;
+}
+
+.reflection-block {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  padding: 34px;
 }
 
 .reflection-block h2 {
+  margin-top: 0;
   margin-bottom: 20px;
 }
 
 .reflection-block p {
   margin-bottom: 18px;
+  color: var(--muted);
+  line-height: 1.8;
 }
 
-@media (max-width: 980px) {
-  .artifact-header {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .artifact-tag {
-    width: fit-content;
+@media (max-width: 1120px) {
+  .artifact-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 780px) {
   .page {
-    padding: 52px 0;
+    padding: 40px 0;
+  }
+
+  .artifacts-hero,
+  .artifact-card,
+  .reflection-block {
+    padding: 24px;
   }
 
   .artifact-detail-grid,
@@ -460,14 +492,13 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .page-intro,
-  .artifact-card,
-  .reflection-block {
-    padding: 24px;
+  .artifacts-hero {
+    border-radius: 18px;
   }
 
-  .page-intro h1 {
-    font-size: 2rem;
+  .artifact-card-header {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
