@@ -404,9 +404,7 @@ a:hover {
 .artifact-detail-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: 24px;
-  align-items: stretch;
 }
 
 .artifact-detail-grid p {
@@ -416,10 +414,8 @@ a:hover {
   border: 1px solid rgba(23, 107, 135, 0.12);
   border-radius: 20px;
   min-height: 220px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
+  display: grid;
+  gap: 16px;
 }
 
 .artifact-detail-grid strong {
