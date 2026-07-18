@@ -7,16 +7,30 @@
   <meta http-equiv="Expires" content="0">  <title>Artifacts | Priyanka Gouspur</title>
   <link rel="stylesheet" href="css/style.css?v=8">
   <style>
+    .artifacts-page {
+      max-width: 1600px !important;
+    }
+
+    .artifact-grid {
+      grid-template-columns: 1fr !important;
+    }
+
     .artifact-detail-grid {
-      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
       gap: 20px !important;
     }
 
     .artifact-detail-grid p {
       min-height: 0 !important;
       padding: 22px !important;
-      border-radius: 14px !important;
+      border-radius: 0 !important;
       display: block !important;
+      aspect-ratio: 1 / 1;
+      overflow: auto;
+    }
+
+    .artifact-card {
+      border-radius: 0 !important;
     }
 
     .artifact-detail-grid strong {
@@ -29,9 +43,19 @@
       display: none !important;
     }
 
+    @media (max-width: 1120px) {
+      .artifact-detail-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      }
+    }
+
     @media (max-width: 780px) {
       .artifact-detail-grid {
         grid-template-columns: 1fr !important;
+      }
+
+      .artifact-detail-grid p {
+        aspect-ratio: auto;
       }
     }
   </style>
@@ -141,22 +165,6 @@
       </article>
     </section>
 
-    <section class="reflection-block">
-      <p class="eyebrow">AI Lab Reflection</p>
-      <h2>Why This AI Lab Project Belongs in My Portfolio</h2>
-
-      <p>
-        I selected the EatWise AI Help Proxy as an artifact because it shows the kind of practical AI implementation work I want to continue developing. The project was small in scope, but it required the same thinking used in professional software work: understanding the user need, connecting an AI service, designing a clean interface, deploying the result, and testing it in production.
-      </p>
-
-      <p>
-        This experience also helped me see that AI work is not only about building models. It is also about making AI tools accessible, trustworthy, and easy for people to use. By turning a Chatbase help page into a branded EatWise AI support experience, I practiced presenting AI in a way that feels more complete and useful for an audience.
-      </p>
-
-      <p>
-        Adding this artifact to my portfolio gives evidence of my ability to learn quickly, troubleshoot technical problems, and create a working AI-connected web project. It reflects my interest in applying AI to real user support and product experiences.
-      </p>
-    </section>
   </main>
 
   <footer class="site-footer">
