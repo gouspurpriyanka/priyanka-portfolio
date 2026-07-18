@@ -404,8 +404,10 @@ a:hover {
 .artifact-detail-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-auto-rows: minmax(0, 1fr);
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+  height: 100%;
   gap: 24px;
+  align-items: stretch;
 }
 
 .artifact-detail-grid p {
@@ -414,16 +416,28 @@ a:hover {
   background: rgba(235, 244, 250, 0.95);
   border: 1px solid rgba(23, 107, 135, 0.12);
   border-radius: 20px;
-  min-height: 220px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  min-height: 0;
+  height: 100%;
 }
 
 .artifact-detail-grid strong {
-  display: block;
-  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
   color: var(--text);
+}
+
+.artifact-detail-grid strong::before {
+  content: '';
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: rgba(22, 110, 149, 0.14);
+  flex-shrink: 0;
 }
 
 .artifact-detail-grid strong::before {
