@@ -246,6 +246,13 @@ a:hover {
   padding: 28px;
 }
 
+.contact-panel {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  gap: 28px;
+  padding: 26px;
+}
+
 .hero-panel div {
   padding-bottom: 18px;
   border-bottom: 1px solid var(--line);
