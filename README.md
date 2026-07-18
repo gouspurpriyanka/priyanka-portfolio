@@ -9,6 +9,7 @@ Professional portfolio for showcasing coursework, artifacts, reflections, skills
 - Experience: software engineering and AI growth
 - Education: degrees and academic background
 - Artifacts page: Workshop 1 AI and Machine Learning Timeline, reflection, and space for future artifacts
+- Additional artifact: EatWise AI Help Proxy deployed on Vercel, demonstrating AI integration and product-facing design
 - Contact: email, LinkedIn, and GitHub links
 
 ## GitHub Pages
