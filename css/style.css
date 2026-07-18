@@ -403,35 +403,22 @@ a:hover {
 
 .artifact-detail-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .artifact-detail-grid p {
   margin: 0;
-  padding: 24px;
-  background: rgba(235, 244, 250, 0.95);
+  padding: 22px;
+  background: rgba(235, 244, 250, 0.9);
   border: 1px solid rgba(23, 107, 135, 0.12);
-  border-radius: 20px;
-  min-height: 220px;
-  display: grid;
-  gap: 16px;
+  border-radius: 14px;
 }
 
 .artifact-detail-grid strong {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
+  display: block;
+  margin-bottom: 10px;
   color: var(--text);
-}
-
-.artifact-detail-grid strong::before {
-  content: '';
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
-  background: rgba(22, 110, 149, 0.16);
-  flex-shrink: 0;
 }
 
 .artifact-actions {
