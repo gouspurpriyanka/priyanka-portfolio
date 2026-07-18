@@ -337,34 +337,138 @@ a:hover {
 
 .page-intro {
   margin-bottom: 44px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 34px;
 }
 
-.content-grid,
-.resume-layout,
-.contact-panel {
-  display: grid;
-  grid-template-columns: 1fr 0.85fr;
-  gap: 28px;
-  align-items: start;
+.page-intro h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  line-height: 1.05;
 }
 
-.info-card,
-.project-card,
-.artifact-detail,
+.page-intro-text {
+  max-width: 720px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
 .artifact-card,
-.resume-section,
-.reflection-block,
-.contact-panel {
-  padding: 26px;
-}
-
-.artifact-list {
-  grid-template-columns: 1.4fr 0.8fr;
+.reflection-block {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 32px;
   margin-bottom: 28px;
 }
 
-.artifact-detail {
-  margin-bottom: 28px;
+.featured-artifact {
+  display: grid;
+  gap: 24px;
+}
+
+.artifact-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.artifact-header h2 {
+  margin: 0;
+  font-size: clamp(1.85rem, 3vw, 2.4rem);
+}
+
+.artifact-tag {
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: rgba(23, 107, 135, 0.12);
+  color: var(--primary-dark);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.78rem;
+  white-space: nowrap;
+}
+
+.artifact-summary-text {
+  color: var(--muted);
+  margin-top: 10px;
+  max-width: 660px;
+}
+
+.artifact-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.artifact-detail-grid p {
+  margin: 0;
+  padding: 22px;
+  background: #fbfcfe;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.artifact-detail-grid strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.artifact-actions {
+  margin-top: 16px;
+  justify-content: flex-start;
+}
+
+.reflection-block h2 {
+  margin-bottom: 20px;
+}
+
+.reflection-block p {
+  margin-bottom: 18px;
+}
+
+@media (max-width: 980px) {
+  .artifact-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .artifact-tag {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 780px) {
+  .page {
+    padding: 52px 0;
+  }
+
+  .artifact-detail-grid,
+  .hero,
+  .content-grid,
+  .contact-panel,
+  .timeline,
+  .education-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .page-intro,
+  .artifact-card,
+  .reflection-block {
+    padding: 24px;
+  }
+
+  .page-intro h1 {
+    font-size: 2rem;
+  }
 }
 
 .artifacts-page {
