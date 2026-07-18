@@ -5,7 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">  <title>Artifacts | Priyanka Gouspur</title>
-  <link rel="stylesheet" href="css/style.css?v=7">
+  <link rel="stylesheet" href="css/style.css?v=8">
+  <style>
+    .artifact-detail-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 20px !important;
+    }
+
+    .artifact-detail-grid p {
+      min-height: 0 !important;
+      padding: 22px !important;
+      border-radius: 14px !important;
+      display: block !important;
+    }
+
+    .artifact-detail-grid strong {
+      display: block !important;
+      margin-bottom: 10px !important;
+    }
+
+    .artifact-detail-grid strong::before {
+      content: none !important;
+      display: none !important;
+    }
+
+    @media (max-width: 780px) {
+      .artifact-detail-grid {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
