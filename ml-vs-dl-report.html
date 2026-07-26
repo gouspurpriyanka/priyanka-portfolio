@@ -106,15 +106,15 @@
     <section class="report-header">
       <p class="eyebrow">AI Lab Report</p>
       <h1>Machine Learning vs. Deep Learning</h1>
-      <p>A practical comparison of how machine learning and deep learning differ in structure, data requirements, training, interpretability, and real-world use.</p>
+      <p>Priyanka Gouspur · AIML-500: Machine Learning Fundamentals · Indiana Wesleyan University · July 14, 2026</p>
       <div class="button-row">
         <a class="button secondary" href="artifacts.html">Back to Artifacts</a>
       </div>
     </section>
 
     <section class="report-section">
-      <h2>Executive Summary</h2>
-      <p>Machine learning is the broader field of algorithms that learn patterns from data. Deep learning is a specialized part of machine learning that uses multilayer neural networks. Traditional machine learning often works well with structured data and carefully selected features, while deep learning is especially effective for complex, unstructured data such as images, audio, and natural language.</p>
+      <h2>Introduction</h2>
+      <p>Machine learning and deep learning are related, but they are not always used for the same types of problems. Deep learning may seem like the better option because it is more advanced, but that does not mean it is the right choice in every situation. The decision depends on the type of data, the goal of the model, and how the results will be used.</p>
     </section>
 
     <section class="report-section">
@@ -163,37 +163,57 @@
     </section>
 
     <section class="report-section">
-      <h2>Common Applications</h2>
-      <div class="report-columns">
-        <div>
-          <h3>Machine Learning</h3>
-          <ul>
-            <li>Customer churn prediction</li>
-            <li>Fraud and anomaly detection</li>
-            <li>Sales and demand forecasting</li>
-            <li>Recommendation and ranking systems</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Deep Learning</h3>
-          <ul>
-            <li>Image and object recognition</li>
-            <li>Speech recognition and synthesis</li>
-            <li>Natural-language processing</li>
-            <li>Generative AI systems</li>
-          </ul>
-        </div>
-      </div>
+      <p>The comparison above provides a general framework. The following two real-world cases show why the correct choice depends on the form of the data, the operational goal, and the need for explainable results.</p>
     </section>
 
     <section class="report-section">
-      <h2>Choosing an Approach</h2>
-      <p>The best approach depends on the problem rather than the popularity of a technique. Traditional machine learning is often a strong choice when the dataset is structured, explainability matters, or computing resources are limited. Deep learning becomes more useful when the task involves complex unstructured data, sufficient examples are available, and the expected performance justifies the additional cost and complexity.</p>
+      <p class="eyebrow">Example 1</p>
+      <h2>Customer Churn Prediction</h2>
+      <h3>Real-World Application</h3>
+      <p>Customer churn prediction is commonly used by telecommunications companies. These companies want to identify customers who may cancel their service so they can take action before that happens. A churn model may use customer information such as contract type, monthly charges, length of service, payment method, service subscriptions, and support history. The model produces a risk score that shows how likely a customer is to leave. A retention team can then contact the customer, offer a discount, recommend a different plan, or address a service issue.</p>
+      <p>One telecom churn model used customer records and social-network information to identify subscribers who were likely to leave. The model achieved an area under the receiver operating characteristic curve (AUC) of 93.3% and was used to support customer-retention efforts.</p>
+
+      <h3>Why Traditional Machine Learning Fits</h3>
+      <p>Traditional machine learning works well for churn prediction because the data is structured. Customer information is usually stored in tables, with each column representing a clear feature such as tenure, contract type, monthly cost, or support calls. These features are already understood by the company. The model does not need to discover what they mean. Analysts and business teams already know that price, contract length, customer-service issues, and service quality may affect whether someone stays or leaves.</p>
+      <p>Simpler models often perform well on this type of data. Logistic regression, random forests, support vector machines, and XGBoost can all identify relationships between customer characteristics and churn. In some studies, logistic regression has performed almost as well as more complex models.</p>
+      <p>Interpretability is also important. A company does not only need to know that a customer may leave; it also needs to understand why. A customer who is unhappy with the price may need a discount, while a customer with repeated technical problems may need better support. Traditional models make it easier to see which features influenced the prediction, helping the company decide what action to take.</p>
+
+      <h3>Why Deep Learning May Be Unnecessary</h3>
+      <p>Deep learning can also be used for churn prediction and may improve accuracy in some cases. However, it may not be necessary for a problem that already has structured data and clear features. Deep-learning models often require more data, computing power, and training time. They can also be harder to explain.</p>
+      <p>A deep-learning model may predict that a customer is likely to leave without clearly showing the business team which factors caused that result. This is a problem because the company needs more than a risk score—it needs information that can lead to an action. If a model is slightly more accurate but much harder to understand, the extra accuracy may provide little practical value. Traditional machine learning is therefore often a better fit because it provides useful predictions while helping the company understand the main causes of churn.</p>
+    </section>
+
+    <section class="report-section">
+      <p class="eyebrow">Example 2</p>
+      <h2>Autonomous Driving</h2>
+      <h3>Real-World Application</h3>
+      <p>Autonomous driving is an example where deep learning is needed. Companies such as Waymo use cameras, radar, and LiDAR sensors to understand what is happening around a vehicle. The system must recognize cars, pedestrians, cyclists, traffic lights, road signs, lane markings, and other objects. It must also track movement and make decisions while the vehicle is moving.</p>
+      <p>The data comes from images and sensor readings rather than simple rows and columns. A self-driving vehicle must process this information quickly because even a small delay can affect safety.</p>
+
+      <h3>Why Deep Learning Fits</h3>
+      <p>Deep learning works well for autonomous driving because it can process large amounts of unstructured data. Images contain thousands or millions of pixels, and LiDAR systems produce large point clouds that represent the vehicle’s surroundings. The important features are not already listed in a table. The system has to learn which shapes, edges, colors, movements, and patterns are related to cars, people, signs, and other objects.</p>
+      <p>Convolutional neural networks are useful because they can learn visual features directly from images. Early layers may identify edges and shapes, while later layers may recognize complete objects. Deep learning is also useful because real-world driving conditions change constantly. A pedestrian may appear at night, in the rain, behind another vehicle, or from a different angle. It would be difficult for a person to create a fixed set of rules for every possible situation. A model can instead learn from many examples and become better at recognizing objects under different conditions. Companies working on autonomous vehicles also have access to the large datasets and computing resources needed to train these models.</p>
+
+      <h3>Why Traditional Machine Learning Falls Short</h3>
+      <p>Traditional machine learning would require engineers to select the important features before training the model. This may work when the data is structured, but it is not practical for raw camera images and LiDAR data. Engineers would have to manually define which image features represent a pedestrian, vehicle, bicycle, or traffic sign. Those features would also need to work across different weather conditions, lighting, angles, distances, and levels of visibility.</p>
+      <p>It is not realistic to create rules for every possible driving situation. A traditional model would have difficulty using raw image pixels because it would not automatically learn the patterns needed to identify objects. Traditional machine learning is also not designed to handle the same volume and complexity of visual and sensor data. Autonomous driving requires the system to recognize objects and react in real time. Deep learning is more suitable because it can learn the necessary features directly from the data.</p>
     </section>
 
     <section class="report-section">
       <h2>Conclusion</h2>
-      <p>Machine learning and deep learning are complementary rather than competing approaches. Understanding their tradeoffs helps engineers select models that fit the available data, business requirements, computing resources, and level of explainability required. A successful AI solution begins with a clear problem and uses the simplest approach capable of solving it reliably.</p>
+      <p>Customer churn prediction and autonomous driving show why the choice between machine learning and deep learning depends on the problem. Customer churn prediction uses structured data with known features, and the business needs to understand why a customer may leave. Traditional machine learning is a good choice because it can provide accurate results and explanations that the company can use.</p>
+      <p>Autonomous driving uses images and sensor data. The system must learn patterns that cannot be manually defined and must recognize objects under many different conditions. Deep learning is better suited for this task because it can learn features directly from large amounts of data.</p>
+    </section>
+
+    <section class="report-section">
+      <h2>References</h2>
+      <ul>
+        <li>Ahmad, A. K., Jafar, A., &amp; Aljoumaa, K. (2019). Customer churn prediction in telecom using machine learning in a big data platform. <em>Journal of Big Data, 6</em>(28). <a href="https://doi.org/10.1186/s40537-019-0191-6" target="_blank" rel="noopener">https://doi.org/10.1186/s40537-019-0191-6</a></li>
+        <li>Mettle, F. O. (2026). Machine learning-based customer churn prediction in telecommunication industry. <em>Applied Computational Intelligence and Soft Computing</em>. <a href="https://doi.org/10.1155/acis/8496186" target="_blank" rel="noopener">https://doi.org/10.1155/acis/8496186</a></li>
+        <li>ReelMind. (2025). <em>Waymo: AI in autonomous driving</em>.</li>
+        <li><em>Explainable machine learning for telecom customer churn prediction and actionable retention strategies</em>. (2026). Applied Artificial Intelligence Research.</li>
+        <li><em>Temporal misalignment attacks against multimodal perception in autonomous driving</em>. (2025). arXiv.</li>
+      </ul>
     </section>
   </main>
 
