@@ -410,8 +410,7 @@ a:hover {
 
 .artifact-detail-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-auto-rows: minmax(0, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
@@ -421,10 +420,6 @@ a:hover {
   background: rgba(235, 244, 250, 0.9);
   border: 1px solid rgba(23, 107, 135, 0.12);
   border-radius: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-height: 240px;
 }
 
 .artifact-detail-grid strong {
