@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning vs. Deep Learning | Priyanka Gouspur</title>
+  <link rel="stylesheet" href="css/style.css?v=8bdc682">
+  <style>
+    .report-page {
+      max-width: 980px;
+    }
+
+    .report-header,
+    .report-section {
+      padding: 32px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+    }
+
+    .report-header,
+    .report-section + .report-section {
+      margin-bottom: 24px;
+    }
+
+    .report-header h1 {
+      margin: 8px 0 16px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+    }
+
+    .report-header p,
+    .report-section p,
+    .report-section li {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .report-section h2 {
+      margin-top: 0;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 16px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.55;
+    }
+
+    .comparison-table th {
+      background: var(--accent);
+      color: var(--text);
+    }
+
+    .comparison-table td {
+      color: var(--muted);
+    }
+
+    .report-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    @media (max-width: 780px) {
+      .report-header,
+      .report-section {
+        padding: 24px;
+      }
+
+      .report-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="index.html">Priyanka Gouspur</a>
+      <div class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#education">Education</a>
+        <a class="active" href="artifacts.html">Artifacts</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container page report-page">
+    <section class="report-header">
+      <p class="eyebrow">AI Lab Report</p>
+      <h1>Machine Learning vs. Deep Learning</h1>
+      <p>A practical comparison of how machine learning and deep learning differ in structure, data requirements, training, interpretability, and real-world use.</p>
+      <div class="button-row">
+        <a class="button secondary" href="artifacts.html">Back to Artifacts</a>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <h2>Executive Summary</h2>
+      <p>Machine learning is the broader field of algorithms that learn patterns from data. Deep learning is a specialized part of machine learning that uses multilayer neural networks. Traditional machine learning often works well with structured data and carefully selected features, while deep learning is especially effective for complex, unstructured data such as images, audio, and natural language.</p>
+    </section>
+
+    <section class="report-section">
+      <h2>Key Differences</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th scope="col">Area</th>
+            <th scope="col">Machine Learning</th>
+            <th scope="col">Deep Learning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Approach</th>
+            <td>Uses algorithms such as decision trees, regression, support vector machines, and clustering.</td>
+            <td>Uses neural networks with multiple layers to learn increasingly complex representations.</td>
+          </tr>
+          <tr>
+            <th scope="row">Data</th>
+            <td>Can perform well with smaller, structured datasets.</td>
+            <td>Usually benefits from large datasets, especially for complex tasks.</td>
+          </tr>
+          <tr>
+            <th scope="row">Features</th>
+            <td>Often relies on people to identify and prepare useful input features.</td>
+            <td>Can learn relevant features directly from raw or minimally processed data.</td>
+          </tr>
+          <tr>
+            <th scope="row">Computing</th>
+            <td>Frequently trains on standard computing resources.</td>
+            <td>Often requires more processing power, memory, and specialized accelerators.</td>
+          </tr>
+          <tr>
+            <th scope="row">Interpretability</th>
+            <td>Many models are easier to inspect and explain.</td>
+            <td>Complex networks can be difficult to interpret without additional techniques.</td>
+          </tr>
+          <tr>
+            <th scope="row">Training Time</th>
+            <td>Often faster to train and iterate on.</td>
+            <td>Training can take substantially longer depending on model and dataset size.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="report-section">
+      <h2>Common Applications</h2>
+      <div class="report-columns">
+        <div>
+          <h3>Machine Learning</h3>
+          <ul>
+            <li>Customer churn prediction</li>
+            <li>Fraud and anomaly detection</li>
+            <li>Sales and demand forecasting</li>
+            <li>Recommendation and ranking systems</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Deep Learning</h3>
+          <ul>
+            <li>Image and object recognition</li>
+            <li>Speech recognition and synthesis</li>
+            <li>Natural-language processing</li>
+            <li>Generative AI systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="report-section">
+      <h2>Choosing an Approach</h2>
+      <p>The best approach depends on the problem rather than the popularity of a technique. Traditional machine learning is often a strong choice when the dataset is structured, explainability matters, or computing resources are limited. Deep learning becomes more useful when the task involves complex unstructured data, sufficient examples are available, and the expected performance justifies the additional cost and complexity.</p>
+    </section>
+
+    <section class="report-section">
+      <h2>Conclusion</h2>
+      <p>Machine learning and deep learning are complementary rather than competing approaches. Understanding their tradeoffs helps engineers select models that fit the available data, business requirements, computing resources, and level of explainability required. A successful AI solution begins with a clear problem and uses the simplest approach capable of solving it reliably.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Priyanka Gouspur. All rights reserved.</p>
+  </footer>
+</body>
+</html>
