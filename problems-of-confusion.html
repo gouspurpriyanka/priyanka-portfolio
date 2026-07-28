@@ -7,25 +7,25 @@
   <link rel="stylesheet" href="css/style.css?v=8bdc682">
   <style>
     .artifact-showcase {
-      width: min(1480px, calc(100% - 40px));
+      width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
       padding: 46px 0 72px;
     }
 
     .back-link {
       display: inline-flex;
-      margin-bottom: 56px;
+      margin-bottom: 42px;
       padding: 12px 20px;
-      color: var(--text);
+      color: var(--primary-dark);
       background: var(--surface);
-      border: 1px solid var(--line);
+      border: 1px solid var(--primary);
       border-radius: 10px;
       font-weight: 700;
     }
 
     .showcase-header {
-      max-width: 980px;
-      margin: 0 auto 56px;
+      max-width: 860px;
+      margin: 0 auto 46px;
     }
 
     .showcase-title-row {
@@ -35,14 +35,24 @@
     }
 
     .showcase-icon {
-      font-size: 3.8rem;
+      display: grid;
+      width: 58px;
+      height: 58px;
+      place-items: center;
+      flex: 0 0 58px;
+      color: var(--primary-dark);
+      background: var(--accent);
+      border: 1px solid rgba(23, 107, 135, 0.18);
+      border-radius: 16px;
+      font-size: 1rem;
+      font-weight: 800;
       line-height: 1;
     }
 
     .showcase-header h1 {
       margin: 0 0 20px;
-      font-size: clamp(2.3rem, 5vw, 4rem);
-      line-height: 1.08;
+      font-size: clamp(2.1rem, 4vw, 3.3rem);
+      line-height: 1.1;
     }
 
     .showcase-tags {
@@ -52,17 +62,18 @@
     }
 
     .showcase-tags span {
-      padding: 8px 18px;
-      color: #fff;
-      background: linear-gradient(135deg, #587fe6, #7354b8);
+      padding: 8px 16px;
+      color: var(--primary-dark);
+      background: var(--accent);
+      border: 1px solid rgba(23, 107, 135, 0.12);
       border-radius: 999px;
       font-weight: 700;
     }
 
     .showcase-layout {
       display: grid;
-      grid-template-columns: 280px minmax(0, 1fr);
-      gap: 48px;
+      grid-template-columns: 240px minmax(0, 1fr);
+      gap: 28px;
       align-items: start;
     }
 
@@ -72,7 +83,7 @@
       padding: 22px;
       background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: 14px;
       box-shadow: var(--shadow);
     }
 
@@ -99,7 +110,7 @@
       overflow: hidden;
       background: var(--surface);
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: 14px;
       box-shadow: var(--shadow);
     }
 
@@ -122,7 +133,7 @@
 
     .showcase-panel summary::after {
       content: '▶';
-      color: #637de8;
+      color: var(--primary);
       font-size: 1rem;
       transition: transform 0.2s ease;
     }
@@ -160,7 +171,7 @@
 
     @media (max-width: 620px) {
       .artifact-showcase {
-        width: min(100% - 28px, 1480px);
+        width: min(100% - 28px, 1120px);
       }
 
       .showcase-title-row {
@@ -199,7 +210,7 @@
 
     <header class="showcase-header">
       <div class="showcase-title-row">
-        <span class="showcase-icon" aria-hidden="true">💬</span>
+        <span class="showcase-icon" aria-hidden="true">04</span>
         <div>
           <h1>Problems of Confusion</h1>
           <div class="showcase-tags">
