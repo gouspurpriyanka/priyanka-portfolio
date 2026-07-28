@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Problems of Confusion | Priyanka Gouspur</title>
+  <link rel="stylesheet" href="css/style.css?v=8bdc682">
+  <style>
+    .artifact-showcase {
+      width: min(1480px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 46px 0 72px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      margin-bottom: 56px;
+      padding: 12px 20px;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      font-weight: 700;
+    }
+
+    .showcase-header {
+      max-width: 980px;
+      margin: 0 auto 56px;
+    }
+
+    .showcase-title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+    }
+
+    .showcase-icon {
+      font-size: 3.8rem;
+      line-height: 1;
+    }
+
+    .showcase-header h1 {
+      margin: 0 0 20px;
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1.08;
+    }
+
+    .showcase-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .showcase-tags span {
+      padding: 8px 18px;
+      color: #fff;
+      background: linear-gradient(135deg, #587fe6, #7354b8);
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    .showcase-layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 48px;
+      align-items: start;
+    }
+
+    .section-nav {
+      position: sticky;
+      top: 98px;
+      padding: 22px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-nav a {
+      display: block;
+      padding: 13px 10px;
+      color: var(--text);
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .section-nav a:hover {
+      color: var(--primary);
+      background: var(--accent);
+    }
+
+    .showcase-content {
+      display: grid;
+      gap: 28px;
+    }
+
+    .showcase-panel {
+      scroll-margin-top: 100px;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .showcase-panel summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 30px 34px;
+      cursor: pointer;
+      color: var(--text);
+      font-size: 1.45rem;
+      font-weight: 800;
+      list-style: none;
+    }
+
+    .showcase-panel summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .showcase-panel summary::after {
+      content: '▶';
+      color: #637de8;
+      font-size: 1rem;
+      transition: transform 0.2s ease;
+    }
+
+    .showcase-panel[open] summary::after {
+      transform: rotate(90deg);
+    }
+
+    .panel-body {
+      padding: 0 34px 32px;
+      border-top: 1px solid var(--line);
+    }
+
+    .panel-body p,
+    .panel-body li {
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .panel-body h3 {
+      margin: 26px 0 8px;
+    }
+
+    @media (max-width: 900px) {
+      .showcase-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .section-nav {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 620px) {
+      .artifact-showcase {
+        width: min(100% - 28px, 1480px);
+      }
+
+      .showcase-title-row {
+        flex-direction: column;
+      }
+
+      .section-nav {
+        grid-template-columns: 1fr;
+      }
+
+      .showcase-panel summary,
+      .panel-body {
+        padding-left: 22px;
+        padding-right: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="index.html">Priyanka Gouspur</a>
+      <div class="nav-links">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#education">Education</a>
+        <a class="active" href="artifacts.html">Artifacts</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="artifact-showcase">
+    <a class="back-link" href="artifacts.html">← Back to Artifacts</a>
+
+    <header class="showcase-header">
+      <div class="showcase-title-row">
+        <span class="showcase-icon" aria-hidden="true">💬</span>
+        <div>
+          <h1>Problems of Confusion</h1>
+          <div class="showcase-tags">
+            <span>Assignment 4.1</span>
+            <span>AI Communication</span>
+            <span>Leadership</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="showcase-layout">
+      <nav class="section-nav" aria-label="Artifact sections">
+        <a href="#introduction">Introduction</a>
+        <a href="#communication-style">Communication Style</a>
+        <a href="#team-confusion">A Real Team Example</a>
+        <a href="#clear-communication">Strategies for Clarity</a>
+        <a href="#activity-3-4">Connection to Activity 3.4</a>
+        <a href="#key-learnings">Key Learnings</a>
+        <a href="#ai-disclosure">AI Disclosure</a>
+      </nav>
+
+      <div class="showcase-content">
+        <details class="showcase-panel" id="introduction" open>
+          <summary>Introduction</summary>
+          <div class="panel-body">
+            <p>Clear communication is an important part of leadership and technical work. A message can be organized and accurate, but it is only effective when the audience understands it in the way the speaker intended. In AI and software projects, unclear requirements or unexplained technical language can create different interpretations, slow progress, and lead to unnecessary rework.</p>
+            <p>This artifact adapts my Assignment 4.1 reflection, “Problems of Confusion,” for a professional portfolio audience. It also connects that reflection to Activity 3.4, where I explained neural-network learning through the familiar example of Face ID.</p>
+          </div>
+        </details>
+
+        <details class="showcase-panel" id="communication-style">
+          <summary>Communication Style</summary>
+          <div class="panel-body">
+            <p>I would describe my communication style as organized and straightforward. I prefer to explain the goal first and then provide the details so everyone understands what needs to be done. At work, I usually summarize meetings, document action items, and ask questions whenever requirements are unclear.</p>
+            <p>Activity 3.4 helped me recognize that communication is not simply about giving information. It is also about confirming that the other person understands it. I can make my communication more effective by avoiding assumptions, matching the level of detail to the audience, and checking for shared understanding before work moves forward.</p>
+          </div>
+        </details>
+
+        <details class="showcase-panel" id="team-confusion">
+          <summary>A Real Team Example</summary>
+          <div class="panel-body">
+            <p>During a software project, my team was discussing updates to an evaluation platform. The feature requirements were discussed in meetings, but not every decision was documented clearly. As a result, different team members interpreted parts of the requirements differently and implemented the feature in different ways.</p>
+            <p>The team had to spend additional time reviewing the requirements, correcting the differences, and updating the implementation. The problem was not a lack of effort or technical skill. It was the absence of one clear, documented understanding that everyone could reference.</p>
+          </div>
+        </details>
+
+        <details class="showcase-panel" id="clear-communication">
+          <summary>Strategies for Clear Communication</summary>
+          <div class="panel-body">
+            <p>That experience taught me that clear communication saves time and prevents avoidable rework. I now use several practical strategies to help a team remain aligned:</p>
+            <ul>
+              <li>Document important decisions after meetings.</li>
+              <li>Identify owners, action items, and expected outcomes.</li>
+              <li>Ask follow-up questions when a requirement could have more than one interpretation.</li>
+              <li>Use examples or acceptance criteria to make expectations concrete.</li>
+              <li>Invite teammates to restate or question the plan before implementation begins.</li>
+              <li>Adapt technical explanations to the audience’s level of experience.</li>
+            </ul>
+          </div>
+        </details>
+
+        <details class="showcase-panel" id="activity-3-4">
+          <summary>Connection to Activity 3.4</summary>
+          <div class="panel-body">
+            <h3>Explaining Neural Networks Through Face ID</h3>
+            <p>In Activity 3.4, I explained neural-network learning through Face ID because it is something many people use every day. Before Face ID is used on a phone, a neural network has already learned from many face images. During training, it is shown examples and learns patterns that distinguish one face from another. When a user sets up Face ID, the phone captures information about that person’s face and uses the trained system to match the user later.</p>
+            <p>I began with a familiar experience and introduced the technical idea in small steps instead of using many specialized terms at once. My goal was to help someone without a machine-learning background understand the difference between training a model and using a trained model in a real application.</p>
+            <h3>How It Supports Assignment 4.1</h3>
+            <p>The activity reinforced the same lesson as my team experience: communication succeeds when it is clear, appropriate for the audience, and checked for understanding. Whether I am explaining an AI model or clarifying software requirements, I need to consider what the audience already knows and where confusion could occur.</p>
+          </div>
+        </details>
+
+        <details class="showcase-panel" id="key-learnings">
+          <summary>Key Learnings</summary>
+          <div class="panel-body">
+            <ul>
+              <li>Sharing information is not the same as creating understanding.</li>
+              <li>Familiar examples can make complex AI ideas approachable.</li>
+              <li>Written decisions and action items give teams a shared reference.</li>
+              <li>Questions and confirmation help reveal different interpretations early.</li>
+              <li>Clear communication is a professional AI competency because it connects technical work with people, decisions, and outcomes.</li>
+            </ul>
+            <p>This learning also reflects the biblical emphasis in the course on speaking with wisdom, promoting understanding, and working together in unity rather than allowing confusion to create unnecessary conflict.</p>
+          </div>
+        </details>
+
+        <details class="showcase-panel" id="ai-disclosure">
+          <summary>AI Disclosure</summary>
+          <div class="panel-body">
+            <p>I used ChatGPT to help organize and refine the presentation of this portfolio artifact. I reviewed and edited the final content to ensure that it accurately reflects my assignment, professional experience, and understanding.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Priyanka Gouspur. All rights reserved.</p>
+  </footer>
+</body>
+</html>
